@@ -1,0 +1,10 @@
+menu "P4X-EYE Camera Stream"
+    config CAMERA_STREAM_FPS
+        int "Maximum JPEG encoding frames per second"
+        range 1 25
+        default 10
+    config CAMERA_STREAM_JPEG_QUALITY
+        int "JPEG image quality"
+        range 1 100
+        default 65
+endmenu

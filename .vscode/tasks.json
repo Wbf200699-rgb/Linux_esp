@@ -1,0 +1,44 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "ESP32-P4: build",
+      "type": "shell",
+      "command": "source ./activate.sh && idf.py build",
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "shell": { "executable": "/bin/bash", "args": ["--noprofile", "--norc", "-c"] }
+      },
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": ["$gcc"]
+    },
+    {
+      "label": "ESP32-P4: menuconfig",
+      "type": "shell",
+      "command": "source ./activate.sh && idf.py menuconfig",
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "shell": { "executable": "/bin/bash", "args": ["--noprofile", "--norc", "-c"] }
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "ESP32-P4: flash and monitor",
+      "type": "shell",
+      "command": "source ./activate.sh && idf.py -p \"${input:serialPort}\" flash monitor",
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "shell": { "executable": "/bin/bash", "args": ["--noprofile", "--norc", "-c"] }
+      },
+      "problemMatcher": ["$gcc"]
+    }
+  ],
+  "inputs": [
+    {
+      "id": "serialPort",
+      "type": "promptString",
+      "description": "开发板在 Ubuntu 内的串口路径",
+      "default": "/dev/ttyACM0"
+    }
+  ]
+}

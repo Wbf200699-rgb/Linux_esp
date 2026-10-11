@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "ESP32-P4 USB JTAG",
+      "type": "gdbtarget",
+      "request": "attach",
+      "gdb": "${command:espIdf.getToolchainGdb}",
+      "program": "${workspaceFolder}/build/p4x_eye_camera.elf",
+      "cwd": "${workspaceFolder}",
+      "runOpenOCD": true,
+      "initialBreakpoint": "app_main",
+      "target": {
+        "connectCommands": [
+          "set remotetimeout 20",
+          "target remote localhost:3333"
+        ]
+      }
+    }
+  ]
+}

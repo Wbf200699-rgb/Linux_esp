@@ -1,0 +1,52 @@
+{
+  "idf.currentSetup": "/home/mark/projects/VScode/.esp/esp-idf",
+  "idf.customExtraVars": {
+    "IDF_PATH": "/home/mark/projects/VScode/.esp/esp-idf",
+    "IDF_TOOLS_PATH": "/home/mark/projects/VScode/.espressif",
+    "IDF_PYTHON_ENV_PATH": "/home/mark/projects/VScode/.espressif/python_env/idf5.5_py3.12_env",
+    "IDF_TARGET": "esp32p4",
+    "PYTHONPATH": "",
+    "CCACHE_DIR": "/home/mark/projects/VScode/.setup/ccache",
+    "IDF_GITHUB_ASSETS": "dl.espressif.com/github_assets",
+    "PYTHONHOME": "",
+    "CMAKE_PROGRAM_PATH": "/home/mark/projects/VScode/.setup/sysroot/usr/bin",
+    "BISON_PKGDATADIR": "/home/mark/projects/VScode/.setup/sysroot/usr/share/bison"
+  },
+  "idf.openOcdConfigs": [
+    "board/esp32p4-builtin.cfg"
+  ],
+  "idf.flashType": "UART",
+  "idf.buildPath": "${workspaceFolder}/build",
+  "cmake.configureOnOpen": false,
+  "C_Cpp.default.compileCommands": "${workspaceFolder}/build/compile_commands.json",
+  "files.exclude": {
+    ".esp": true,
+    ".espressif": true,
+    ".setup": true
+  },
+  "search.exclude": {
+    ".esp/**": true,
+    ".espressif/**": true,
+    ".setup/**": true,
+    "build/**": true,
+    "ros2_ws/build/**": true,
+    "ros2_ws/install/**": true
+  },
+  "files.watcherExclude": {
+    "**/.esp/**": true,
+    "**/.espressif/**": true,
+    "**/.setup/**": true,
+    "**/build/**": true
+  },
+  "terminal.integrated.profiles.linux": {
+    "ESP32-P4 (ESP-IDF)": {
+      "path": "/bin/bash",
+      "args": [
+        "--rcfile",
+        "/home/mark/projects/VScode/scripts/idf-bashrc"
+      ]
+    }
+  },
+  "terminal.integrated.defaultProfile.linux": "ESP32-P4 (ESP-IDF)",
+  "idf.port": "/dev/ttyACM0"
+}
